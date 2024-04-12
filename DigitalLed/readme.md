@@ -20,7 +20,7 @@ Visual Studio Code.
 PlatformIO.](./media/platformio-active-project.png)
 
 Now add a global config variable defined at the beginning of the script
-to set the port only once (type int).
+to set the port only once (type `int`).
 
 ```c++
 #include <Arduino.h>

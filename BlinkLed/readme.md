@@ -2,7 +2,7 @@
 
 **Example:** *BlinkLed*
 
-Go to PIO Home and click on "+ New Project":
+Go to PIO Home and click on *"+ New Project"*:
 
 ![Creating a new project in
 PlatformIO](./media/blinkled-platformio.png)
