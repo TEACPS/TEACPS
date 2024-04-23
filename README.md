@@ -12,6 +12,7 @@ This repository contains examples of courses related to tangible user interfaces
 - [LedFadePwm](LedFadePwm/README.md) – Fading an external LED using pulse width modulation
 - [SerialOutput](SerialOutput/README.md) – Outputting data to the serial monitor
 - [TouchInput](TouchInput/README.md) – Touch input using capacitive sensing
+- [LDR](LDR/README.md) – Reading the brightness using a light-dependent resistor
 
 ## License
 

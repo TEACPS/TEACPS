@@ -4,7 +4,7 @@
 
 Instead of the program automatically running, we now want to influence
 the program. The ESP32 platform provides several PINs that have a touch
-input functionality. This corresponds to a capacitive sensing -- you
+input functionality. This corresponds to a capacitive sensing – you
 simply connect a cable to the PIN and can then determine if you touch it
 with your finger or not.
 
