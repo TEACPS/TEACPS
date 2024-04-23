@@ -14,6 +14,7 @@ This repository contains examples of courses related to tangible user interfaces
 - [TouchInput](TouchInput/README.md) – Touch input using capacitive sensing
 - [LDR](LDR/README.md) – Reading the brightness using a light-dependent resistor
 - [ESPWebServer](ESPWebServer/README.md) – Setting up a web server on the ESP32
+- [ESP32WebSockets](ESP32WebSockets/README.md) – Transmitting LDR measurements from an ESP32 to a web socket client
 
 ## License
 
