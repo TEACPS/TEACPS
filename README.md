@@ -9,3 +9,9 @@ This repository contains examples of courses related to tangible user interfaces
 - [SimpleLed](SimpleLed/README.md) – Lighting up an external LED with an ESP32 / Arduino
 - [DigitalLed](DigitalLed/README.md) – Digitally controlled external LED with an ESP32 / Arduino
 - [LedFadeDac](LedFadeDac/README.md) – Fading an external LED using the digital/analog converter with an ESP32 / Arduino
+- [LedFadePwm](LedFadePwm/README.md) – Fading an external LED using pulse width modulation with an ESP32 / Arduino
+- [SerialOutput](SerialOutput/README.md) – Outputting data to the serial monitor with an ESP32 / Arduino
+
+## License
+
+This repository is licensed under the MIT license. See [LICENSE](LICENSE) for details.

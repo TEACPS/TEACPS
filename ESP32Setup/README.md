@@ -13,7 +13,7 @@ ESP32 Drivers: We will use the following two ESP32 boards:
 
 - LOLIN D32 -> <https://www.wemos.cc/en/latest/d32/d32.html>
 
-Both support the same development platform called **"Espressif"** and
+Both support the same development platform called **Espressif** and
 are compatible with the **Arduino** framework. The Pro-variant
 additionally features a MicroSD slot and has a little better specs; but
 both have the same PINs to connect sensors.
