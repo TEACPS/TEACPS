@@ -5,5 +5,7 @@ This repository contains examples of courses related to tangible user interfaces
 ## Labs
 
 - [ESP32Setup](ESP32Setup/README.md) – Setting up the ESP32 with PlatformIO for Visual Studio Code
-- [BlinkLed](BlinkLed/README.md) – Blinking LED with Arduino
-- [DigitalLed](DigitalLed/README.md) – Digital LED with Arduino
+- [BlinkLed](BlinkLed/README.md) – Blinking onboard LED with an ESP32 / Arduino
+- [SimpleLed](SimpleLed/README.md) – Lighting up an external LED with an ESP32 / Arduino
+- [DigitalLed](DigitalLed/README.md) – Digitally controlled external LED with an ESP32 / Arduino
+- [LedFadeDac](LedFadeDac/README.md) – Fading an external LED using the digital/analog converter with an ESP32 / Arduino
