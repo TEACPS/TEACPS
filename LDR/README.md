@@ -55,7 +55,7 @@ $$V_{out} = \frac{R_{2}}{R_{1} + R_{2}}*V_{in}$$
 Solving for $R_{2}$ gives (see
 <https://en.wikipedia.org/wiki/Voltage_divider#Resistive_divider> ):
 
-$$R_{2} = R_{1}*\frac{1}{\frac{V_{in}}{V_{out}} - 1} = 10000\Omega*\frac{1}{\frac{3.3V}{0.73V} - 1} = 2840\Omega$$
+$$R_{2} = R_{1} * \frac{1}{\frac{V_{in}}{V_{out}} - 1} = 10000\Omega * \frac{1}{\frac{3.3V}{0.73V} - 1} = 2840\Omega$$
 
 If you have a data sheet of the LDR, you could then use this resistance
 value to convert it to LUX, a measurement of the brightness of the room.
@@ -70,7 +70,7 @@ How to get to a good value for $R_{1}$? A good approach is to measure the
 minimum and maximum $Ω$ you want to consider. Then put these values into
 the Axel Benz Formula 🡪
 
-$$R_{ref} = \sqrt{R_{\min}*R_{\max}} = \sqrt{870\Omega*4000\Omega} = 1865\Omega$$
+$$R_{ref} = \sqrt{R_{\min} * R_{\max}} = \sqrt{870\Omega * 4000\Omega} = 1865\Omega$$
 
 Now that you know the theoretical basics, it is time to build it:
 
