@@ -32,12 +32,14 @@ code accordingly.
 ## Project Setup
 
 Create a new project with Visual Studio Code and
-Platform.IO. Add the "ESP Async WebServer" by Hristo Gochkov. See the [ESP32 Web Server chapter](../ESPWebServer/README.md) for detailed instructions.
+Platform.IO. Add the "ESP Async WebServer" by Hristo Gochkov. See the
+[ESP32 Web Server chapter](../ESPWebServer/README.md) for detailed instructions.
+Make sure you choose the more recent version maintained by mathieucarbou / yubox-node-org.
 
 The library also has more information about handling WebSockets, but it
 doesn't contain a simple example that only includes the functionality we
 require for sending & receiving web socket messages:
-<https://github.com/me-no-dev/ESPAsyncWebServer#async-websocket-plugin>
+<https://github.com/yubox-node-org/ESPAsyncWebServer#async-websocket-plugin>
 
 ## Wiring
 

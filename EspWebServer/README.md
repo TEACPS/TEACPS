@@ -20,16 +20,17 @@ Webserver"* library through PIO Home.\
 Note: do not install the version with "-esphome" in the name – these
 are variants for a home automation system. We need:
 
-- **ESP Async WebServer** by Hristo Gochkov:\
-    <https://github.com/me-no-dev/ESPAsyncWebServer>
+- **ESP Async WebServer** by Hristo Gochkov (yubox-node-org, Mathieu Carbou):\
+    <https://github.com/mathieucarbou/ESPAsyncWebServer>
 
 - **AsyncTSP** (dependency of the webserver, automatically
     installed):\
-    <https://github.com/me-no-dev/AsyncTCP>
+    <https://github.com/mathieucarbou/AsyncTCP>
 
 Search for the "ESP Async WebServer" in the Registry-tab of Libraries.
 Then click on "Add to Project" and select your project from the
-drop-down list.
+drop-down list. Make sure you choose the more
+recent version maintained by mathieucarbou / yubox-node-org.
 
 ![Adding the \"ESP Async WebServer\" library and
 example.](./media/adding-esp-async-webserver.png)
