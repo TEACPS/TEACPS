@@ -40,7 +40,7 @@ void setup()
 void loop()
 {
   // put your main code here, to run repeatedly:
-  for (int i = 255; i \>= 0; i\--)
+  for (int i = 255; i >= 0; i--)
   {
     ledcWrite(pwm_channel, i);
     delay(5);

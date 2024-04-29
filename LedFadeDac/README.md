@@ -34,7 +34,7 @@ void setup()
 void loop()
 {
   // put your main code here, to run repeatedly:
-  for (int i = 0; i \< 255; i++)
+  for (int i = 0; i < 255; i++)
   {
     dacWrite(pin_led, i);
     delay(10);
