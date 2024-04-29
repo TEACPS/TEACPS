@@ -18,4 +18,4 @@ This repository contains examples of courses related to tangible user interfaces
 
 ## License
 
-This repository is licensed under the MIT license. See [LICENSE](LICENSE) for details.
+This repository is licensed under the GPLv3 license. See [LICENSE](LICENSE) for details.
