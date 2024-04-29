@@ -27,7 +27,7 @@ void onWsEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventTyp
   if (type == WS_EVT_DATA)
   {
     // Complete code for handling multi-part incoming messages or binary messages:
-    // https://github.com/me-no-dev/ESPAsyncWebServer
+    // https://github.com/yubox-node-org/ESPAsyncWebServer
     String receivedData = (char *)data;
     // Serial.println((char *)data);
     Serial.println(receivedData);
