@@ -28,6 +28,7 @@ These additional examples are more high-level and focus on specific sensors. The
 - [PulseOximeterSparkfun](PulseOximeterSparkfun/README.md) – Reading pulse oximeter and heart rate data from a Sparkfun sensor
 - [PulseSensor](PulseSensor/README.md) – Reading pulse sensor data (very basic example)
 - [DHT11TemperatureHumidity](DHT11TemperatureHumidity/README.md) – Reading temperature and humidity data from a DHT11 sensor
+- [ProximitySensor](ProximitySensor/README.md) – Reading proximity data from a simple proximity sensor
 
 ## License
 
