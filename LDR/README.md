@@ -26,7 +26,7 @@ resistor with a value that is known to you, and a second variable
 resistor (in our case, the LDR). Then you measure the voltage in the
 middle of both components. As a result, you know:
 
-- The input voltage (3.3V).
+- The input voltage ($3.3V$).
 - The resistance of the reference resistor.
 - The voltage measured between both components.
 
