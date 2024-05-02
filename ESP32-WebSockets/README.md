@@ -33,7 +33,7 @@ code accordingly.
 
 Create a new project with Visual Studio Code and
 Platform.IO. Add the "ESP Async WebServer" by Hristo Gochkov. See the
-[ESP32 Web Server chapter](../ESPWebServer/README.md) for detailed instructions.
+[ESP32 Web Server chapter](../EspWebServer/README.md) for detailed instructions.
 Make sure you choose the more recent version maintained by mathieucarbou / yubox-node-org.
 
 The library also has more information about handling WebSockets, but it
