@@ -2,6 +2,8 @@
 
 This repository contains examples of courses related to tangible user interfaces, electronics, and physical computing at the St. Pölten University of Applied Sciences in Austria.
 
+![TEACPS Logo](TEACPS-Icon-DALLE.webp)
+
 ## ESP32 / Arduino Labs
 
 The following code examples are based on the [ESP32 microcontroller](https://www.espressif.com/en/products/socs/esp32) and the [Arduino framework](https://www.arduino.cc/). They are written in C++ and can be used with the [PlatformIO IDE](https://platformio.org/) for [Visual Studio Code](https://code.visualstudio.com/).
