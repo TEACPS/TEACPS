@@ -25,6 +25,7 @@ The examples are structured in a way that they can be used in a lab setting. Eac
 These additional examples are more high-level and focus on specific sensors. They are also based on the ESP32 microcontroller and the Arduino framework.
 
 - [PulseOximeterAndHeartRateSensor](PulseOximeterAndHeartRateSensor/README.md) – Reading pulse oximeter and heart rate data from a MAX30102 sensor
+- [PulseOximeterSparkfun](PulseOximeterSparkfun/README.md) – Reading pulse oximeter and heart rate data from a Sparkfun sensor
 - [PulseSensor](PulseSensor/README.md) – Reading pulse sensor data (very basic example)
 
 ## License
