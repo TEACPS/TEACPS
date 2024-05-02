@@ -51,7 +51,7 @@ initializes the sensor and reads the data. The data is then printed to
 the serial port.
 
 The sensor is configured to measure the heart rate and the oxygen
-saturation of the blood. The sensor is then read four times per second, 
+saturation of the blood. The sensor is then read four times per second,
 and the data is printed to the serial port.
 
 ## Photos

@@ -25,10 +25,11 @@ The examples are structured in a way that they can be used in a lab setting. Eac
 These additional examples are more high-level and focus on specific sensors. They are also based on the ESP32 microcontroller and the Arduino framework.
 
 - [PulseOximeterAndHeartRateSensor](PulseOximeterAndHeartRateSensor/README.md) – Reading pulse oximeter and heart rate data from a MAX30102 sensor
-- [PulseOximeterSparkfun](PulseOximeterSparkfun/README.md) – Reading pulse oximeter and heart rate data from a Sparkfun sensor
+- [PulseOximeterSparkfun](PulseOximeterSparkfun/README.md) – Reading pulse oximeter and heart rate data from a Sparkfun sensor (MAX30101 & MAX32664) using the Sparkfun library
 - [PulseSensor](PulseSensor/README.md) – Reading pulse sensor data (very basic example)
-- [DHT11TemperatureHumidity](DHT11TemperatureHumidity/README.md) – Reading temperature and humidity data from a DHT11 sensor
-- [ProximitySensor](ProximitySensor/README.md) – Reading proximity data from a simple proximity sensor
+- [DHT11TemperatureHumidity](DHT11TemperatureHumidity/README.md) – Reading temperature and humidity data from a DHT11 sensor (digital)
+- [ProximitySensor](ProximitySensor/README.md) – Reading proximity data from a simple proximity sensor (digital)
+- [HallEffectSensor](HallEffectSensor/README.md) – Reading analog data from a Hall-Effect sensor (A3144)
 
 ## License
 
