@@ -30,6 +30,7 @@ These additional examples are more high-level and focus on specific sensors. The
 - [DHT11TemperatureHumidity](DHT11TemperatureHumidity/README.md) – Reading temperature and humidity data from a DHT11 sensor (digital)
 - [ProximitySensor](ProximitySensor/README.md) – Reading proximity data from a simple proximity sensor (digital)
 - [HallEffectSensor](HallEffectSensor/README.md) – Reading analog data from a Hall-Effect sensor (A3144)
+- [Microphone](Microphone/README.md) – Reading analog data from a microphone sensor (KY-038)
 
 ## License
 
