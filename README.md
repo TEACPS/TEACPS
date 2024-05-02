@@ -27,6 +27,7 @@ These additional examples are more high-level and focus on specific sensors. The
 - [PulseOximeterAndHeartRateSensor](PulseOximeterAndHeartRateSensor/README.md) – Reading pulse oximeter and heart rate data from a MAX30102 sensor
 - [PulseOximeterSparkfun](PulseOximeterSparkfun/README.md) – Reading pulse oximeter and heart rate data from a Sparkfun sensor
 - [PulseSensor](PulseSensor/README.md) – Reading pulse sensor data (very basic example)
+- [DHT11TemperatureHumidity](DHT11TemperatureHumidity/README.md) – Reading temperature and humidity data from a DHT11 sensor
 
 ## License
 
