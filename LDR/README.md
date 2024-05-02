@@ -14,6 +14,8 @@ breadboard.](./media/photo-of-ldr.jpg)
 As such, to get the brightness, we essentially need to find out the
 resistance value of the LDR.
 
+## Voltage Divider
+
 However, most boards (including the ESP32 or Arduino) cannot measure a
 resistance in $Ω$ like a multimeter can. Therefore, you need to use a
 **voltage divider**. The available input voltage (in our case $3.3V$) is
@@ -42,7 +44,15 @@ input port of the ESP32 will be $0$ for $0V$ and $4096$ for $3.3V$. It
 splits up the voltage range into $4096$ individual steps – that is the
 accuracy we have.
 
-An example: we use $R_{1}=10.000Ω$ if the ESP32 returns the value $a=1000$
+## Calculating the Resistance
+
+How to get to a good value for the fixed resistor ($R_{1}$)?
+A good approach is to measure the minimum and maximum $Ω$ you want to 
+consider. Then put these values into the Axel Benz Formula 🡪
+
+$$R_{ref} = \sqrt{R_{\min} * R_{\max}} = \sqrt{40\Omega * 4000000\Omega} = 12649\Omega$$
+
+**An example:** we use $R_{1}=10.000Ω$ if the ESP32 returns the value $a=1000$
 on the analog input pin, that means:
 
 $$V_{out} = \frac{V_{in}}{4096.0}*a = \frac{3.3V}{4096}*1000 = 0.81V$$
@@ -66,11 +76,7 @@ levels is used. For example, if your $R_{1}$ is huge (several megaohms), a
 small difference in the resistance of the LDR will not have a noticeable
 impact on the voltage division.
 
-How to get to a good value for $R_{1}$? A good approach is to measure the
-minimum and maximum $Ω$ you want to consider. Then put these values into
-the Axel Benz Formula 🡪
-
-$$R_{ref} = \sqrt{R_{\min} * R_{\max}} = \sqrt{870\Omega * 4000\Omega} = 1865\Omega$$
+## Circuit Design
 
 Now that you know the theoretical basics, it is time to build it:
 
