@@ -43,13 +43,17 @@ With this example you can inspect commands from any IR remote the library suppor
 
 1. Comment out all `#defines` with the supported protocols
   * this should be line 44 should be commented out and should look like this
-https://github.com/mhusinsky/TEACPS/blob/56631b2723785830b509c08a3877f44fb2bb3bfa/IRRemote/src/main.cpp#L44
+```cpp
+// #define DECODE_NEC
+```
 2. check on which pin the IRreceiver listens for IR codes from the module. for this, look at line 79 and hover `IR_RECEIVE_PIN`. It reveals that this is pin 15.
   * In case you want to find out where this is defined or even change it to a different pin, just
     * put the cursor in the word `IR_RECEIVE_PIN`
     * hit the F12 key on your keyboard. this will jump to the definition of `IR_RECEIVE_PIN` and open up the `PinDefinitionsAndMore.h` file, which looks like this 
-https://github.com/mhusinsky/TEACPS/blob/56631b2723785830b509c08a3877f44fb2bb3bfa/IRRemote/src/PinDefinitionsAndMore.h#L208
-    The `#define` statement is a preprocessor, which acts like a search-and-replace command before compilation. Here `IR_RECEIVE_PIN` will be replaced by `15` all over the code. Feel free to change it to a different number which corresponds to a pin that you want to use for receiving IR codes.
+```cpp
+#define IR_RECEIVE_PIN          15  // D15
+```
+   * The `#define` statement is a *[preprocessor](https://en.wikipedia.org/wiki/Preprocessor)*, which acts like a search-and-replace command before compilation. Here `IR_RECEIVE_PIN` will be replaced by `15` all over the code. Feel free to change it to a different number which corresponds to a pin that you want to use for receiving IR codes.
 3. connect the pin marked with an `S` (for signal) with the pin you have specified above (`15` if unchanged). Connect the `-`pin to GND on your board and the middle pin of the module to `3V`on your board.
 4. Connect the ESP32 to USB and upload the code.
 
