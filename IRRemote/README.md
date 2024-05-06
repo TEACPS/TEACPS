@@ -1,7 +1,9 @@
 # Infrared Remote
 
 Typical remote controls based on IR emitting LEDs (like they are used for TVs) are using pulsed light codes to send commands.
-Using the [Arduino-IRRemote library](https://github.com/Arduino-IRremote/Arduino-IRremote) and a IR-LED and IR photodiode we can easily use the remotes for our purposes, or remote control devices that are usually meant to be control from a handheld remote from our microcontroller.
+Using the [Arduino-IRRemote library](https://github.com/Arduino-IRremote/Arduino-IRremote) and a [IR-LED module (KY-005)](https://sensorkit.joy-it.net/en/sensors/ky-005) and [IR photodiode module (KY-022)](https://sensorkit.joy-it.net/en/sensors/ky-022) we can easily use the remotes for our purposes, or remote control devices that are usually meant to be control from a handheld remote from our microcontroller.
+
+In this example we'll explore how to use the receiver.
 
 ## Technical background
 TODO
