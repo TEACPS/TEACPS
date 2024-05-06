@@ -67,13 +67,24 @@ Now press the buttons that you later want to recreate using the IR Emitter and t
 Looking at the code the usage of the library is quite simple
 
 First we have to create the `IRRemote.h` header file and the additional `PinDefinitionsAndHeader.h`, which contains certain defines like the `IR_RECEIVE_PIN`.
-https://github.com/mhusinsky/TEACPS/blob/56631b2723785830b509c08a3877f44fb2bb3bfa/IRRemote/src/main.cpp#L67C1-L72C1
+```cpp
+/*
+ * This include defines the actual pin number for pins like IR_RECEIVE_PIN, IR_SEND_PIN for many different boards and architectures
+ */
+#include "PinDefinitionsAndMore.h"
+#include <IRremote.hpp> // include the library
+```
 
 Note, that by including these headers we'll automatically get a `IRReceiver` object which we first have to configure before using it (which happens on line `79`).
-https://github.com/mhusinsky/TEACPS/blob/56631b2723785830b509c08a3877f44fb2bb3bfa/IRRemote/src/main.cpp#L79
+```cpp
+// Start the receiver and if not 3. parameter specified, take LED_BUILTIN pin from the internal boards definition as default feedback LED
+IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);
+```
 
 On line 82 we call a function called `printActiveIRProtocols` that takes a reference (`&`) to a serial port, on which the active IR protocols will be printed.
-https://github.com/mhusinsky/TEACPS/blob/56631b2723785830b509c08a3877f44fb2bb3bfa/IRRemote/src/main.cpp#L82
+```cpp
+printActiveIRProtocols(&Serial);
+```
 
 ### Using the receiver
 In our `loop` function we only listen for newly arrived IR codes. Whenever the `IrReceiver.decode()` returns `true` a new code has arrived ant the `if` clause on line 95 will be entered.
@@ -82,20 +93,30 @@ Now there are 2 possible cases:
 * We received a code the library doesn't recognize (line 100). Then the raw IR codes will be printed to the serial monitor by calling the  `IrReceiver.printIRResultRawFormatted(&Serial, true);` function on line 103. 
 * or the received code can be recognized (line 105). then 
   * we'll tell the receiver to continue listening for commands by calling `IrReceiver.resume()` on line 106
-  * and then print the recognized codes on the serial monitor by calling `IrReceiver.printIRResultShort(&Serial)` on lin 107
+  * and then print the recognized codes on the serial monitor by calling `IrReceiver.printIRResultShort(&Serial)` on line 107
 
 
 You see that the `IrReceiver` object contains everything we need for decoding and retrieving the received data.
 
 Lines 115 and following show how to easily react on a certain received command. To adjust it for our own remote control we need to replace the command-codes with commands from our own remote control. In our simple example, we'll toggle the board's onbord LED with the remote control. We just need to fill out the blocks with our code:
-
-https://github.com/mhusinsky/TEACPS/blob/56631b2723785830b509c08a3877f44fb2bb3bfa/IRRemote/src/main.cpp#L112C9-L119C10
-
+```cpp
+/*
+ * Finally, check the received data and perform actions according to the received command
+ */
+if (IrReceiver.decodedIRData.command == 0x10) {
+    // do something
+} else if (IrReceiver.decodedIRData.command == 0x11) {
+    // do something else
+}
+```
 1. Check which commandset your remote control uses. In the example remote used here, we coud see above that the NEC protocol was used (for your own remote it might be different). It is therefore sufficient to only include the this protocol in the code and therefore uncomment the NEC protocol at line 44 (note that you should do this accordingly. E.g. if you use a Sony command, uncomment line 46 instead).
+```cpp
+#define DECODE_NEC          // Includes Apple and Onkyo. To enable all protocols , just comment/disable this line.
+```
 2. Since the onboard-LED was used to signify a received command when configuring the `IrReceiver` on line 79, we'll change this line to disable the LED feedback like this: `IrReceiver.begin(IR_RECEIVE_PIN, false)`. Now we have to setup our onboard LED ourselves to use it. Add the `pinMode(LED_BUILTIN, OUTPUT)` command to your setup to be able to use the LED.
 3. Now lets use 2 IR remote buttons to turn on and off the LED. In the if-clauses starting around line 115, modify the blocks to use one button to turn on the LED and another button to turn it off. This could look like this.
 
-```
+```cpp
 /*
  * Finally, check the received data and perform actions according to the received command
  */
