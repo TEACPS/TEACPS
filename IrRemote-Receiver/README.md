@@ -58,7 +58,7 @@ With this example you can inspect commands from any IR remote the library suppor
 #define IR_RECEIVE_PIN          15  // D15
 ```
    * The `#define` statement is a *[preprocessor](https://en.wikipedia.org/wiki/Preprocessor)*, which acts like a search-and-replace command before compilation. Here `IR_RECEIVE_PIN` will be replaced by `15` all over the code. Feel free to change it to a different number which corresponds to a pin that you want to use for receiving IR codes.
-3. connect the pin marked with an `S` (for signal) with the pin you have specified above (`15` if unchanged). Connect the `-`pin to GND on your board and the middle pin of the module to `3V`on your board.
+3. connect the pin marked with an `S` (for signal) with the pin you have specified above (`15` if unchanged). Connect the `-` pin to GND on your board and the middle pin of the module to `3V`on your board.
 4. Connect the ESP32 to USB and upload the code.
 
 ### Serial output
@@ -95,7 +95,7 @@ printActiveIRProtocols(&Serial);
 ```
 
 ### Using the receiver
-In our `loop` function we only listen for newly arrived IR codes. Whenever the `IrReceiver.decode()` returns `true` a new code has arrived ant the `if` clause on line 95 will be entered.
+In our `loop` function we only listen for newly arrived IR codes. Whenever the `IrReceiver.decode()` returns `true` a new code has arrived and the `if` clause on line 95 will be entered.
 
 Now there are 2 possible cases: 
 * We received a code the library doesn't recognize (line 100). Then the raw IR codes will be printed to the serial monitor by calling the  `IrReceiver.printIRResultRawFormatted(&Serial, true);` function on line 103. 
