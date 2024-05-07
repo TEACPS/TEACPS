@@ -3,30 +3,28 @@
 Typical remote controls based on IR emitting LEDs (like they are used for TVs) are using pulsed light codes to send commands.
 Using the [Arduino-IRRemote library](https://github.com/Arduino-IRremote/Arduino-IRremote) and a [IR-LED sender module (KY-005)](https://sensorkit.joy-it.net/en/sensors/ky-005) and [IR photodiode receiver module (KY-022)](https://sensorkit.joy-it.net/en/sensors/ky-022) we can easily use the remotes for our purposes, or remote control devices that are usually meant to be control from a handheld remote from our microcontroller.
 
-In this example we'll explore how to use the receiver.
+In this example we'll explore how to use the receiver. In the [second part](../IrRemote-Sender/) the sender will be put into action.
 
 ## Technical background
 TODO
 
 # Setup
 ## IR Receiver
-The IR receiver module allows for reception of most IR remote control signals from common handheld remotes. It consists of a specialised phototransistor that will output the received pulses as voltage, which then can be decoded by the microcontroller. Furthermore the module has an onboard LED that pulses whenever it receives an IR pulse it can decode.
+The IR receiver module ([KY-022](https://sensorkit.joy-it.net/en/sensors/ky-022)) allows for reception of most IR remote control signals from common handheld IR remotes. It consists of a specialised phototransistor that will output the received pulses as voltage, which then can be decoded by the microcontroller. Furthermore the module has an onboard LED that pulses whenever it receives an IR pulse it can decode.
 
 We just need to connect GND (the pin marked with `-`), Vin (middle pin) and the signal output pin (marked as `S`). 
 
 SCHEMATIC
 
-## IR Transmitter
-The IR transmitter module consists of an IR LED and a current limiting resistor.
-
-We just need to connect GND (the pin marked with `-`), Vin (middle pin) and the signal output pin (marked as `S` - see below for details which pin you need to hook up on your board). 
 
 # Code
 Import the [IRRemote library from the PlatformIO registry](https://registry.platformio.org/libraries/z3t0/IRremote) or directly from [Github](https://github.com/Arduino-IRremote/Arduino-IRremote). 
 
-In the first example we'll just try to figure out for any IR remote we have lying around (e.g. from a TV) what codes it sends. In the second example we'll send out these codes with the IR Transmitter to remote control the IR controllable device from our ESP32.
-
 ## Sniffing IR remotes
+In the first example we'll just try to figure out for any IR remote we have lying around (e.g. from a TV) what codes it sends. In the [second example](../IrRemote-Sender/)  we'll send out these codes with the IR Transmitter to remote control the IR controllable device from our ESP32.
+
+> **Note**: When you download this repository, all but the last step walkthrough described here are already done. Purpose of the description here is to show you, how you can setup the project yourself.
+
 After importing the library to your project and saving the `platformio.ini` file, you will find the `IRRemote` library code and examples in the `IRRemote/.pio/libdeps/IRremote/examples` path. 
 
 IMAGE
