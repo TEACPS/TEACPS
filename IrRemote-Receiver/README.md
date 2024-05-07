@@ -1,4 +1,4 @@
-# Infrared Remote
+# Infrared Remote - Receiver
 
 Typical remote controls based on IR emitting LEDs (like they are used for TVs) are using pulsed light codes to send commands.
 Using the [Arduino-IRRemote library](https://github.com/Arduino-IRremote/Arduino-IRremote) and a [IR-LED sender module (KY-005)](https://sensorkit.joy-it.net/en/sensors/ky-005) and [IR photodiode receiver module (KY-022)](https://sensorkit.joy-it.net/en/sensors/ky-022) we can easily use the remotes for our purposes, or remote control devices that are usually meant to be control from a handheld remote from our microcontroller.
@@ -12,9 +12,12 @@ TODO
 ## IR Receiver
 The IR receiver module ([KY-022](https://sensorkit.joy-it.net/en/sensors/ky-022)) allows for reception of most IR remote control signals from common handheld IR remotes. It consists of a specialised phototransistor that will output the received pulses as voltage, which then can be decoded by the microcontroller. Furthermore the module has an onboard LED that pulses whenever it receives an IR pulse it can decode.
 
-We just need to connect GND (the pin marked with `-`), Vin (middle pin) and the signal output pin (marked as `S`). 
+![KY-022 IR sensor module](media/ir_receiver_ky022.jpg)
 
-SCHEMATIC
+We just need to connect GND (the pin marked with `-`), Vin (middle pin) to the 3V pin and the signal output pin (marked as `S`) to pin number 15 (this is defined in the `PinDefinitionsAndMore.h` file, see below). 
+
+![KY-022 connected to the ESP32](media/ir_receiver_board01.jpg)![KY-022 connected to the ESP32, alternative view](media/ir_receiver_board02.jpg)
+
 
 
 # Code
@@ -27,7 +30,7 @@ In the first example we'll just try to figure out for any IR remote we have lyin
 
 After importing the library to your project and saving the `platformio.ini` file, you will find the `IRRemote` library code and examples in the `IRRemote/.pio/libdeps/IRremote/examples` path. 
 
-IMAGE
+![IR ReceiveDemo](media/ir_receivedemo_project.png)
 
 Go to the `SimpleReceiver` example, then
 * Select the `SimpleReceiver.ino` file to open it
@@ -36,7 +39,7 @@ Go to the `SimpleReceiver` example, then
 
 The result should look like this:
 
-IMAGE
+![src dir](media/ir_receivedemo_src.png)
 
 ### Adjustments in the code
 With this example you can inspect commands from any IR remote the library supports via the serial monitor. In the top-most part protocols from different vendors can selectively be included or, when no specific protocol is selected, decode all supported protocols.
@@ -47,6 +50,7 @@ With this example you can inspect commands from any IR remote the library suppor
 // #define DECODE_NEC
 ```
 2. check on which pin the IRreceiver listens for IR codes from the module. for this, look at line 79 and hover `IR_RECEIVE_PIN`. It reveals that this is pin 15.
+![Pin 15](media/ir_receivedemo_pin15.png)
   * In case you want to find out where this is defined or even change it to a different pin, just
     * put the cursor in the word `IR_RECEIVE_PIN`
     * hit the F12 key on your keyboard. this will jump to the definition of `IR_RECEIVE_PIN` and open up the `PinDefinitionsAndMore.h` file, which looks like this 
