@@ -15,23 +15,23 @@ the function with `ln` at the end (short for *line*) also inserts a new
 line after printing the contents you send via the parameter.
 
 ```c++
-#include <Arduino.h>
+#include <Arduino.h>
 
-int ledOn = LOW;
+int ledOn = LOW;
 
-void setup()
+void setup()
 {
-  pinMode(LED_BUILTIN, OUTPUT);
-  Serial.begin(9600);
+  pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);
 }
 
-void loop()
+void loop()
 {
-  ledOn = (ledOn == LOW) ? HIGH : LOW;
-  digitalWrite(LED_BUILTIN, ledOn);
-  Serial.print("LED status: ");
-  Serial.println(ledOn);
-  delay(500);
+  ledOn = (ledOn == LOW) ? HIGH : LOW;
+  digitalWrite(LED_BUILTIN, ledOn);
+  Serial.print("LED status: ");
+  Serial.println(ledOn);
+  delay(500);
 }
 ```
 

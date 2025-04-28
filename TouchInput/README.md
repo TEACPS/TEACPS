@@ -24,24 +24,24 @@ touching the cable or not). Look at the values when you touch the cable
 or not to determine a suitable threshold for your setup.
 
 ```c++
-#include <Arduino.h>
+#include <Arduino.h>
 
-int pin_led = 25;
-int pin_touch = 27;
+int pin_led = 25;
+int pin_touch = 27;
 
-void setup()
+void setup()
 {
-  pinMode(pin_led, OUTPUT);
-  Serial.begin(9600);
+  pinMode(pin_led, OUTPUT);
+  Serial.begin(9600);
 }
 
-void loop()
+void loop()
 {
-  uint16_t touch_status = touchRead(pin_touch);
-  Serial.print("Touch status: ");
-  Serial.println(touch_status);
-  digitalWrite(pin_led, touch_status < 40 ? HIGH : LOW);
-  delay(10);
+  uint16_t touch_status = touchRead(pin_touch);
+  Serial.print("Touch status: ");
+  Serial.println(touch_status);
+  digitalWrite(pin_led, touch_status < 40 ? HIGH : LOW);
+  delay(10);
 }
 ```
 
