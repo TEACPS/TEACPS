@@ -40,7 +40,9 @@ void loop()
   // Serial.println("]");
 
   // For Arduino Serial Plotter
-  Serial.print(red);
-  Serial.print(", ");
+  Serial.print(">red:");
+  Serial.println(red);
+  
+  Serial.print(">ir:");
   Serial.println(ir);
 }
