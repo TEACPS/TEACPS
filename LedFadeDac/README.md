@@ -21,23 +21,23 @@ specifying a number giving the percentage in the range of $0 - 255$ (equals $0V$
 too fast, and you can still see the fading process.
 
 ```c++
-#include <Arduino.h>
+#include <Arduino.h>
 
-int pin_led = 25;
+int pin_led = 25;
 
-void setup()
+void setup()
 {
-  // put your setup code here, to run once:
-  pinMode(pin_led, OUTPUT);
+  // put your setup code here, to run once:
+  pinMode(pin_led, OUTPUT);
 }
 
-void loop()
+void loop()
 {
-  // put your main code here, to run repeatedly:
-  for (int i = 0; i < 255; i++)
-  {
-    dacWrite(pin_led, i);
-    delay(10);
-  }
+  // put your main code here, to run repeatedly:
+  for (int i = 0; i < 255; i++)
+  {
+    dacWrite(pin_led, i);
+    delay(10);
+  }
 }
 ```

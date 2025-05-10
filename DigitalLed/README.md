@@ -23,22 +23,22 @@ Now add a global config variable defined at the beginning of the script
 to set the port only once (type `int`).
 
 ```c++
-#include <Arduino.h>
+#include <Arduino.h>
 
-int pin_led = 18;
+int pin_led = 18;
 
-void setup()
+void setup()
 {
-  // put your setup code here, to run once:
-  pinMode(pin_led, OUTPUT);
+  // put your setup code here, to run once:
+  pinMode(pin_led, OUTPUT);
 }
 
-void loop()
+void loop()
 {
-  // put your main code here, to run repeatedly:
-  digitalWrite(pin_led, HIGH);
-  delay(300);
-  digitalWrite(pin_led, LOW);
-  delay(300);
+  // put your main code here, to run repeatedly:
+  digitalWrite(pin_led, HIGH);
+  delay(300);
+  digitalWrite(pin_led, LOW);
+  delay(300);
 }
 ```

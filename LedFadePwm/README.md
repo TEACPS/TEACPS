@@ -21,30 +21,30 @@ with the LED attached to pin 25. The following code fades from on to off
 with a quicker speed (lower delay) than before:
 
 ```c++
-#include <Arduino.h>
+#include <Arduino.h>
 
-int pin_led = 25;
-int pwm_channel = 0;
+int pin_led = 25;
+int pwm_channel = 0;
 
-void setup()
+void setup()
 {
-  // Assign LED pin to PWM channel 0
-  ledcAttachPin(pin_led, pwm_channel);
+  // Assign LED pin to PWM channel 0
+  ledcAttachPin(pin_led, pwm_channel);
 
-  // Configure PWM channel
-  // channel 0-15, frequency, resolution (bits)
-  // Here: channel 0, 4kHz, 8 bit resolution (allows 0 .. 255)
-  ledcSetup(pwm_channel, 4000, 8);
+  // Configure PWM channel
+  // channel 0-15, frequency, resolution (bits)
+  // Here: channel 0, 4kHz, 8 bit resolution (allows 0 .. 255)
+  ledcSetup(pwm_channel, 4000, 8);
 }
 
-void loop()
+void loop()
 {
-  // put your main code here, to run repeatedly:
-  for (int i = 255; i >= 0; i--)
-  {
-    ledcWrite(pwm_channel, i);
-    delay(5);
-  }
+  // put your main code here, to run repeatedly:
+  for (int i = 255; i >= 0; i--)
+  {
+    ledcWrite(pwm_channel, i);
+    delay(5);
+  }
 }
 ```
 

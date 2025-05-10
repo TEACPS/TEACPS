@@ -28,21 +28,21 @@ Arduino IDE adds that automatically if not present. If it's missing in
 an example, just add it at the top of the file!)*
 
 ```c++
-#include <Arduino.h>
+#include <Arduino.h>
 
-void setup()
+void setup()
 {
-  // put your setup code here, to run once:
-  pinMode(LED_BUILTIN, OUTPUT);
+  // put your setup code here, to run once:
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
-void loop()
+void loop()
 {
-  // put your main code here, to run repeatedly:
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(300);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(300);
+  // put your main code here, to run repeatedly:
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(300);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(300);
 }
 ```
 
