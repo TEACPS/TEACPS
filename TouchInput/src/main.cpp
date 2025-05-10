@@ -13,7 +13,7 @@ void loop()
 {
   uint16_t touch_status = touchRead(pin_touch);
 
-  Serial.print("Touch status: ");
+  Serial.print(">Touchstatus:");
   Serial.println(touch_status);
 
   digitalWrite(pin_led, touch_status < 40 ? HIGH : LOW);
