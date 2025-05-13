@@ -100,3 +100,20 @@ PlatformIO](./media/espressif32-platformio.png)
 
 Now, everything should be in place so that you can start developing for
 the board!
+
+## Download  Problem Solution (relevant for downloading a program)
+
+Some Laptops may have a problem when trying to downloading programs, which is relevant for all other of the other examples. 
+In this case the download can stall for a while (showing an number of ...) and then abort. 
+This can happen when the Laptop has a USB Hub controller that goes into engery saving mode, preventing the correct setting of control signals on the USB-Serial converter on the board.
+
+One solution to this problem works as follows: 
+
+1) Connect Pin 0 and Pin GND with a wire
+
+2) Press the Boot button on the board once (this puts the ESP into download mode)
+
+3) Click the “→” arrow VS Code to download the program to the ESP in 
+
+4) If the download is complete, remove the wire
+
